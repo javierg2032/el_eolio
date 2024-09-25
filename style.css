@@ -1,0 +1,28 @@
+body {
+    background-color: #808080;
+}
+
+.container {
+    margin: 100px auto;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container img {
+    flex:content;
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.123);
+    transition: width 0.75s ease-in-out, height 0.5s ease-in-out;
+ 
+}
+
+.container img:hover {
+    width: 25%;
+    height: 110%;
+}
