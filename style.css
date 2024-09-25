@@ -8,7 +8,7 @@ body {
     height: 450px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 7.5px;
 }
 
 .container img {
@@ -17,12 +17,13 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.123);
-    transition: width 0.75s ease-in-out, height 0.5s ease-in-out;
+    border: 2px solid rgba(194, 176, 128, 0.336);
+    transition: width 0.75s ease-in-out, height 0.5s ease-in-out,transform 0.5s ease-in-out;
  
 }
 
 .container img:hover {
     width: 25%;
     height: 110%;
+    transform: translateY(-5%);
 }
