@@ -4,11 +4,11 @@ body {
 
 .container {
     margin: 100px auto;
-    width: 70%;
+    width: 75%;
     height: 450px;
     display: flex;
     justify-content: center;
-    gap: 7.5px;
+    gap: px;
 }
 
 .container img {
