@@ -1,29 +1,62 @@
 body {
-    background-color: #808080;
+    background-color: #DB292F;
+    cursor: url("./Imagenes/D20Mouse.png"), auto; /* Cursor personalizado */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.image-section {
+    background-color: #D4BA83;
+    padding: 20px 0;
 }
 
 .container {
-    margin: 100px auto;
-    width: 75%;
+    margin: 0 auto;
+    width: 70%;
     height: 450px;
     display: flex;
     justify-content: center;
-    gap: px;
+    gap: 10px;
 }
 
-.container img {
-    flex:content;
-    width: 10%;
+.image-box {
+    position: relative;
+    width: 12%; /* Ajusta el ancho del div */
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid rgba(194, 176, 128, 0.336);
-    transition: width 0.75s ease-in-out, height 0.5s ease-in-out,transform 0.5s ease-in-out;
- 
+    object-position: center;
+    transform: translate(-50%, -50%) scale(1); /* Centrar y escalar a 1 */
+    transition: transform 0.5s ease-in-out; /* Transición suave */
 }
 
-.container img:hover {
-    width: 25%;
-    height: 110%;
-    transform: translateY(-5%);
+.image-box:hover img {
+    transform: translate(-50%, -50%) scale(1.5); /* Aumentar el tamaño al pasar el mouse */
+    z-index: 1; /* Asegura que la imagen esté por encima del div */
 }
