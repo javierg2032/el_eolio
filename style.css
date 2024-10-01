@@ -1,6 +1,12 @@
+html, body {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+}
+
 body {
     background-color: #DB292F;
     cursor: url("./Imagenes/D20Mouse.png"), auto; /* Cursor personalizado */
+    font-family: 'Jacques Francois', serif; /* Fuente personalizada aplicada al cuerpo */
 }
 
 .header {
@@ -8,8 +14,11 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #000000;
-    padding: 10px 20px;
+    padding: 10px 10px; /* Puedes ajustar el padding según tu preferencia */
     color: white;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.568); /* Sombra en el header */
+
 }
 
 .logo-container {
@@ -22,9 +31,21 @@ body {
     height: auto;
 }
 
+h1 {
+    font-family: 'Jacques Francois', serif; /* Fuente aplicada al título */
+}
+
+nav ul li a {
+    font-family: 'Jacques Francois', serif; /* Fuente aplicada al menú de navegación */
+}
+
 .image-section {
     background-color: #D4BA83;
-    padding: 20px 0;
+    padding: 40px; /* Distancia entre el section y los bordes */
+    margin-top: 20px; /* Distancia entre el section y el header */
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
 .container {
@@ -52,11 +73,11 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transform: translate(-50%, -50%) scale(1); /* Centrar y escalar a 1 */
-    transition: transform 0.5s ease-in-out; /* Transición suave */
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.5s ease-in-out;
 }
 
 .image-box:hover img {
-    transform: translate(-50%, -50%) scale(1.5); /* Aumentar el tamaño al pasar el mouse */
+    transform: translate(-50%, -50%) scale(1.5);
     z-index: 1; /* Asegura que la imagen esté por encima del div */
 }
