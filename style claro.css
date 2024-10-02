@@ -1,162 +1,160 @@
 html, body {
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    width: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
     overflow-x: hidden; /* Evita el desplazamiento lateral */
 }
 
 body {
-    background-color: #f8f8f8; 
-    cursor: url("./Imagenes/D20MouseClaro.png"), auto; 
-    font-family: 'Jacques Francois', serif; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    background-color: #f8f8f8;
+    cursor: url("./Imagenes/D20MouseClaro.svg"), auto;
+    font-family: 'Jacques Francois', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit; 
+    box-sizing: inherit;
 }
 
 .header {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: #f8f8f8; 
-    padding: 10px 20px; 
-    color: #D4BA83; 
-    width: 100%; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
-    max-width: 1200px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    color: #D4BA83;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    max-width: 1200px; /* Máximo ancho del header */
 }
 
 .logo-container {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
 }
 
 h1 {
-    font-family: 'Jacques Francois', serif; 
-    font-size: 1.5em; 
+    font-family: 'Jacques Francois', serif;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    font-family: 'Jacques Francois', serif; 
+    font-family: 'Jacques Francois', serif;
+    text-decoration: none;
+    color: #000;
 }
 
 .image-section {
-    background-color: #D4BA83; 
-    padding: 40px; 
-    margin: 20px auto; 
-    border-radius: 10px; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
-    max-width: 1200px; 
-    width: 100%; 
+    background-color: #D4BA83;
+    padding: 40px;
+    margin: 10px auto; /* Reducir el margen superior e inferior */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    width: 90%; /* Mantén el ancho al 90% del contenedor */
 }
 
 .container {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 10px; 
-    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar contenido en el contenedor */
+    gap: 10px; /* Espacio entre imágenes */
+    width: 100%;
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
+    filter:drop-shadow(0px 0px 12px rgb(26, 26, 26));
 }
 
-.image-box {
-    position: relative; 
-    width: 20%; /* Ajustado para pantallas grandes */
-    height: 200px; /* Altura fija para mantener proporciones */
-    overflow: hidden; 
-    border-radius: 10px; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+.container img {
+    width: 200px; /* Aumentar el ancho para monitores */
+    height: 300px; /* Altura fija para mantener la forma rectangular */
+    object-fit: contain; /* Ajusta la imagen sin recorte */
+    transition: transform 0.8s ease-in-out, clip-path 0.8s ease-in-out; /* Aumentar la duración a 0.8 segundos */
+    margin-bottom: 7.25px;
+    margin-top: 7.25px;
+    
 }
 
-.image-box img {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    height: auto; /* Mantiene la relación de aspecto */
-    object-fit: cover; 
-    object-position: center; 
-    transform: translate(-50%, -50%) scale(1); 
-    transition: transform 0.5s ease-in-out; 
-}
-
-.image-box:hover img {
-    transform: translate(-50%, -50%) scale(1.5); 
-    z-index: 1; 
+.container img:hover {
+    clip-path: inset(0); /* Elimina el recorte completamente */
+    transform: scale(1.25); /* Aumentar el zoom al hacer hover para expandirse más */
 }
 
 .footer {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: #f8f8f8; 
-    padding: 10px 20px; 
-    color: #D4BA83; 
-    width: 100%; 
-    max-width: 1200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    color: #D4BA83;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* Media Queries para responsive */
-
-/* Pantallas medianas: Tablets y dispositivos pequeños */
-@media (max-width: 1024px) {
-    .image-box {
-        width: 45%; /* Ajusta el ancho de las imágenes en pantallas medianas */
-    }
-
-    h1 {
-        font-size: 1.3em; 
-    }
-}
-
-/* Pantallas pequeñas: Móviles */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section {
+        width: 90%; /* Aumentar el ancho del contenedor en móviles */
+    }
+
+    .container img {
+        width: 45%; /* Dos imágenes en el móvil */
+        height: auto; /* Mantener la proporción */
+        clip-path: inset(0%); /* Sin recorte en móviles */
     }
 
     .container {
-        flex-direction: column; 
-        gap: 20px; 
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    }
-
-    .image-box {
-        width: 90%; /* Las imágenes ocupan casi todo el ancho en móviles */
-        height: 200px; 
-    }
-
-    h1 {
-        font-size: 1.2em; 
+        height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        padding: 10px; 
+        padding: 10px;
     }
 
     .image-section {
-        padding: 10px; 
-        margin: 10px; 
+        padding: 10px;
+        margin: 10px auto; /* Centrar la sección de imagen */
     }
 
-    .image-box {
-        width: 100%; 
-        height: 180px; 
+    .container img {
+        width: 45%; /* Dos imágenes en móviles pequeños */
+        height: auto; /* Mantener la proporción */
+        clip-path: inset(0%); /* Sin recorte en móviles pequeños */
+    }
+
+    .container {
+        height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
     }
 
     h1 {
-        font-size: 1em; 
+        font-size: 1em;
     }
 }
