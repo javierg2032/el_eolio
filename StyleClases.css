@@ -1,9 +1,11 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-    overflow-x: hidden; /* Evita el desplazamiento lateral */
+    overflow-x: hidden;
+    /* Evita el desplazamiento lateral */
 }
 
 body {
@@ -15,7 +17,9 @@ body {
     align-items: center;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -27,11 +31,15 @@ body {
     padding: 10px 20px;
     color: #D4BA83;
     width: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    max-width: 1200px; /* Máximo ancho del header */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    /* Máximo ancho del header */
 }
+
 .header-title {
-    color: #D4BA83; /* Cambia a tu color preferido */
+    color: #D4BA83;
+    margin-left: 10px;
+    /* filter:drop-shadow(0px 0px 12px rgb(0, 0, 0,0.25));*/
 }
 
 
@@ -43,6 +51,7 @@ body {
 .logo {
     width: 100px;
     height: auto;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
 }
 
 .logoclase {
@@ -50,28 +59,34 @@ body {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    margin-right: 10px;
+    /* Espacio entre la imagen y el texto */
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.75));
 }
 
 h1 {
     font-family: 'Jacques Francois', serif;
     font-size: 3em;
     margin: 0;
-    display: flex; /* Alinea la imagen y el texto horizontalmente */
-    align-items:end; /* Centra la imagen y el texto verticalmente */
+    display: flex;
+    /* Alinea la imagen y el texto horizontalmente */
+    align-items: end;
+    /* Centra la imagen y el texto verticalmente */
     color: #ffffff;
 }
 
-h2{
+h2 {
     font-family: 'Jacques Francois', serif;
-   font-size: 2.5em;
+    font-size: 2.5em;
     margin: 0;
-    display: flex; /* Alinea la imagen y el texto horizontalmente */
-    align-items:end; /* Centra la imagen y el texto verticalmente */
+    display: flex;
+    /* Alinea la imagen y el texto horizontalmente */
+    align-items: end;
+    /* Centra la imagen y el texto verticalmente */
     color: #ffffff;
 }
 
-p{
+p {
     color: #ffffff;
 }
 
@@ -94,6 +109,7 @@ nav ul li a {
 
 table {
     border-collapse: collapse;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.75));
 }
 
 th,
@@ -106,39 +122,20 @@ td {
 .image-section {
     background-color: #D4BA83;
     padding: 40px;
-    margin: 10px auto; /* Reducir el margen superior e inferior */
+    margin: 10px auto;
+    /* Reducir el margen superior e inferior */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5));
     max-width: 1200px;
-    width: 90%; /* Mantén el ancho al 90% del contenedor */
+    width: 90%;
+    /* Mantén el ancho al 90% del contenedor */
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centrar contenido en el contenedor */
-    gap: 10px; /* Espacio entre imágenes */
-    width: 100%;
-    max-width: 1200px; /* Máximo ancho del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-    height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
-    filter:drop-shadow(0px 0px 12px rgb(26, 26, 26));
+.imagenClase {
+    filter: drop-shadow(0px 0px 12px rgb(0, 0, 0));
 }
 
-.container img {
-    width: 200px; /* Aumentar el ancho para monitores */
-    height: 300px; /* Altura fija para mantener la forma rectangular */
-    object-fit: contain; /* Ajusta la imagen sin recorte */
-    transition: transform 0.8s ease-in-out, clip-path 0.8s ease-in-out; /* Aumentar la duración a 0.8 segundos */
-    margin-bottom: 7.25px;
-    margin-top: 7.25px;
-    
-}
 
-.container img:hover {
-    clip-path: inset(0); /* Elimina el recorte completamente */
-    transform: scale(1.25); /* Aumentar el zoom al hacer hover para expandirse más */
-}
 
 .footer {
     display: flex;
@@ -159,19 +156,24 @@ td {
     }
 
     .image-section {
-        width: 90%; /* Aumentar el ancho del contenedor en móviles */
+        width: 90%;
+        /* Aumentar el ancho del contenedor en móviles */
     }
 
-    .container img {
-        width: 45vw; /* Cambiado a vw para que la imagen sea más responsiva */
-        height: auto; /* Mantener la proporción */
-        clip-path: inset(0%); /* Sin recorte en móviles */
+    .imagenClase {
+        width: 45vw;
+        /* Cambiado a vw para que la imagen sea más responsiva */
+        height: auto;
+        /* Mantener la proporción */
+        clip-path: inset(0%);
+        /* Sin recorte en móviles */
     }
 
 
 
     .container {
-        height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
+        height: auto;
+        /* Cambiado a auto para que el contenedor se ajuste al contenido */
     }
 }
 
@@ -182,19 +184,24 @@ td {
 
     .image-section {
         padding: 10px;
-        margin: 10px auto; /* Centrar la sección de imagen */
+        margin: 10px auto;
+        /* Centrar la sección de imagen */
     }
 
     .container img {
-        width: 90vw; /* Aumenta el tamaño de la imagen en móviles pequeños */
-        height: auto; /* Mantener la proporción */
-        clip-path: inset(0%); /* Sin recorte en móviles pequeños */
+        width: 90vw;
+        /* Aumenta el tamaño de la imagen en móviles pequeños */
+        height: auto;
+        /* Mantener la proporción */
+        clip-path: inset(0%);
+        /* Sin recorte en móviles pequeños */
     }
 
 
 
     .container {
-        height: auto; /* Cambiado a auto para que el contenedor se ajuste al contenido */
+        height: auto;
+        /* Cambiado a auto para que el contenedor se ajuste al contenido */
     }
 
     h1 {
