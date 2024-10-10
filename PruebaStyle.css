@@ -73,7 +73,7 @@ h1 {
   margin: 10px auto;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
-  max-width: 1600px;
+  max-width: 2500px;
   width: 90%; /* Ocupa el 90% del contenedor */
   margin-bottom: 10px; /* Espacio entre la sección de personajes y el siguiente elemento */
 }
